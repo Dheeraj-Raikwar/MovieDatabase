@@ -26,13 +26,10 @@ Features:
 	● UpVote/DownVote Api - The registered users are able to upvote or down-vote a movie.[movieId & vote parameter is Required, Give upvote or downvote as vote]  
 	● Add Review Api - The registered users are able to add a review for a movie.[movieId & review parameter is Required]
 		
-		
 Public Api:
 		
 	● Get Movies api[GET]
 	● sort by upvotes/downVotes[GET]
-		
-		
 		
 EndPoints:
 	
@@ -51,17 +48,16 @@ EndPoints:
 		
 Installation:
 
-	● Install STS or other IDE of your choice with and import project(Java 1.8 or later is required)
+	● Install STS or other IDE of your choice and import project with maven environment(Java 1.8 or later is required)
 	● Install Postgresql
 	● Install Postman for testing
 	● Create a new Database (MovieDatabase) in Postgresql and run sql script
-	● Build and run
+	● Build and run project
 		
-
-	Postman response can be found in Output folder.
-
 Notes:
 
 	● Favourite genre is set using query parameter.
 	● In Movie Table score is calculated by average rating of upvotes and downvotes which are in voting table.
 	● Reviews are present in review table.
+	
+	Postman response can be found in Output folder
