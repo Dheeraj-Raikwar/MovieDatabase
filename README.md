@@ -65,10 +65,24 @@ Features:
 	Process:
 		● Sign up
 		
-		
+		![alt text](https://github.com/DheerajR8/MovieDatabase/blob/main/Output/MDSignup.PNG?raw=true)
 	
 	
 		● Sign in
+		
+		![alt text](https://github.com/DheerajR8/MovieDatabase/blob/main/Output/MDSignin.PNG?raw=true)
+		
+		● Add Movie
+		
+		![alt text](https://github.com/DheerajR8/MovieDatabase/blob/main/Output/MDUserAddMovie.PNG?raw=true)
+		
+		● Get Movie Details
+		
+		![alt text](https://github.com/DheerajR8/MovieDatabase/blob/main/Output/MDPublic.PNG?raw=true)
+		
+		
+		
+		Json response can be found in Output folder.
 
 
 Known issues
