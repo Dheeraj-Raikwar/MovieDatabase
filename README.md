@@ -62,28 +62,8 @@ Features:
 		● Create a new Database (MovieDatabase) in Postgresql and run sql script
 		● Build and run
 		
-	Process:
-		● Sign up
-		
-		![alt text](https://raw.githubusercontent.com/DheerajR8/MovieDatabase/main/Output/MDSignup.PNG)
-	
-	
-		● Sign in
-		
-		![alt text](https://github.com/DheerajR8/MovieDatabase/blob/main/Output/MDSignin.PNG?raw=true)
-		
-		● Add Movie
-		
-		![alt text](https://github.com/DheerajR8/MovieDatabase/blob/main/Output/MDUserAddMovie.PNG?raw=true)
-		
-		● Get Movie Details
-		
-		![alt text](https://github.com/DheerajR8/MovieDatabase/blob/main/Output/MDPublic.PNG?raw=true)
-		
-		
-		
-		Json response can be found in Output folder.
 
+		Postman response can be found in Output folder.
 
 Known issues
 		● Favourite genre is set using query parameter.
