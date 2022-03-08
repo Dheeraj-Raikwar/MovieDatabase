@@ -57,7 +57,7 @@ Features:
 	Installation:
 
 		● Install STS or other IDE of your choice with and import project(Java 1.8 or later is required)
-        ● Install Postgresql
+                ● Install Postgresql
 		● Install Postman for testing
 		● Create a new Database (MovieDatabase) in Postgresql and run sql script
 		● Build and run
