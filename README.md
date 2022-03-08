@@ -12,7 +12,7 @@ Features:
 	Registration Services:
 	● Register/Signup - Api for user registration (username/password should be fine)
 	● Login Api - Registered user should be able to login and use other Apis For registered users only:
-	● Add Movies Api - A registered user must be able to add a movie to the DB. A movie have a title, genre, release date, score.[POST] [movie details in request 		body is Required]
+	● Add Movies Api - A registered user must be able to add a movie to the DB. A movie have a title, genre, release date, score.[POST] [movie details in request body is Required]
 	 For Example:
 	{
 		"title": "The Godfather",
