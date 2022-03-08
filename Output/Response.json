@@ -1,0 +1,450 @@
+{
+	"id": "c4fd645f-7afb-4c4f-811a-5010abc5df89",
+	"name": "MovieDatabase       api/",
+	"timestamp": "2022-03-08T10:16:39.899Z",
+	"collection_id": "15669378-2dbb751b-ddd1-471f-b36d-5bdeb588a306",
+	"folder_id": 0,
+	"environment_id": "0",
+	"totalPass": 22,
+	"totalFail": 0,
+	"results": [
+		{
+			"id": "47cf8aa8-5a7c-466e-ad00-be3d78523f41",
+			"name": "sign up",
+			"url": "http://localhost:8080/api/auth/signup",
+			"time": 20,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {
+				"Response Body Printout= ({\"message\":\"Error: Username is already taken!\"})": true
+			},
+			"testPassFailCounts": {
+				"Response Body Printout= ({\"message\":\"Error: Username is already taken!\"})": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				20
+			],
+			"allTests": [
+				{
+					"Response Body Printout= ({\"message\":\"Error: Username is already taken!\"})": true
+				}
+			]
+		},
+		{
+			"id": "d812d3eb-f4d2-4d66-93f6-74f6813bd837",
+			"name": "signin",
+			"url": "http://localhost:8080/api/auth/signin",
+			"time": 287,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Response Body Printout= ({\"id\":1,\"username\":\"user\",\"email\":\"abc@gmail.com\",\"roles\":[\"ROLE_USER\"],\"tokenType\":\"Bearer\",\"accessToken\":\"eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ1c2VyIiwiaWF0IjoxNjQ2NzM0NjAwLCJleHAiOjE2NDY4MjEwMDB9.u6dYHIc-Pf2PdITijVy7aCoDEL4Zm4NpCF-RWTvWi2Mr_MPnGOs55LFUV4ntFmLiDJ1-CNpv37jXuuR37Oxnnw\"})": true
+			},
+			"testPassFailCounts": {
+				"Response Body Printout= ({\"id\":1,\"username\":\"user\",\"email\":\"abc@gmail.com\",\"roles\":[\"ROLE_USER\"],\"tokenType\":\"Bearer\",\"accessToken\":\"eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ1c2VyIiwiaWF0IjoxNjQ2NzM0NjAwLCJleHAiOjE2NDY4MjEwMDB9.u6dYHIc-Pf2PdITijVy7aCoDEL4Zm4NpCF-RWTvWi2Mr_MPnGOs55LFUV4ntFmLiDJ1-CNpv37jXuuR37Oxnnw\"})": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				287
+			],
+			"allTests": [
+				{
+					"Response Body Printout= ({\"id\":1,\"username\":\"user\",\"email\":\"abc@gmail.com\",\"roles\":[\"ROLE_USER\"],\"tokenType\":\"Bearer\",\"accessToken\":\"eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ1c2VyIiwiaWF0IjoxNjQ2NzM0NjAwLCJleHAiOjE2NDY4MjEwMDB9.u6dYHIc-Pf2PdITijVy7aCoDEL4Zm4NpCF-RWTvWi2Mr_MPnGOs55LFUV4ntFmLiDJ1-CNpv37jXuuR37Oxnnw\"})": true
+				}
+			]
+		},
+		{
+			"id": "5971837d-63c9-4d49-99f0-f2440e3b0fa2",
+			"name": "Details",
+			"url": "http://localhost:8080/api/test/user/getmovie?id=30",
+			"time": 14,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Response Body Printout= ({\"title\":\"The King's Man\",\"genre\":\"Action\",\"details\":\"In the early years of the 20th century, the Kingsman agency is formed to stand against a cabal plotting a war to wipe out millions.\",\"releaseDate\":\"14 January 2022 \",\"score\":0.0})": true
+			},
+			"testPassFailCounts": {
+				"Response Body Printout= ({\"title\":\"The King's Man\",\"genre\":\"Action\",\"details\":\"In the early years of the 20th century, the Kingsman agency is formed to stand against a cabal plotting a war to wipe out millions.\",\"releaseDate\":\"14 January 2022 \",\"score\":0.0})": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				14
+			],
+			"allTests": [
+				{
+					"Response Body Printout= ({\"title\":\"The King's Man\",\"genre\":\"Action\",\"details\":\"In the early years of the 20th century, the Kingsman agency is formed to stand against a cabal plotting a war to wipe out millions.\",\"releaseDate\":\"14 January 2022 \",\"score\":0.0})": true
+				}
+			]
+		},
+		{
+			"id": "742129d9-2e58-473c-a8c2-827995255bee",
+			"name": "Add Movie",
+			"url": "http://localhost:8080/api/test/user/addmovie",
+			"time": 14,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Headers Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ1c2VyIiwiaWF0IjoxNjQ2NjU3MDE1LCJleHAiOjE2NDY3NDM0MTV9.xwgUCPSz_nJnIgXfyCXSTZP0QgxplXqHjCpX6oZiUNsGpWXe21m7p5MjRRXPaNR0w9RLOfRmECA3vaKcn8FnCQ\r\nContent-Type: application/json\r\nUser-Agent: PostmanRuntime/7.29.0\r\nAccept: */*\r\nPostman-Token: 3dac84d3-f054-49b4-acce-de770a34d6f6\r\nHost: localhost:8080\r\nAccept-Encoding: gzip, deflate, br\r\nConnection: keep-alive\r\nContent-Length: 260\r\n": true,
+				"Request Body {\r\n    \"title\": \"The Godfather\",\r\n    \"genre\": \"Drama\",\r\n    \"details\": \"The aging patriarch of an organized crime dynasty in postwar New York City transfers control of his clandestine empire to his reluctant youngest son.\",\r\n    \"release_date\":\"1972-04-14\"\r\n}": true,
+				"Response Body Printout (Movie Added Successfully)": true
+			},
+			"testPassFailCounts": {
+				"Headers Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ1c2VyIiwiaWF0IjoxNjQ2NjU3MDE1LCJleHAiOjE2NDY3NDM0MTV9.xwgUCPSz_nJnIgXfyCXSTZP0QgxplXqHjCpX6oZiUNsGpWXe21m7p5MjRRXPaNR0w9RLOfRmECA3vaKcn8FnCQ\r\nContent-Type: application/json\r\nUser-Agent: PostmanRuntime/7.29.0\r\nAccept: */*\r\nPostman-Token: 3dac84d3-f054-49b4-acce-de770a34d6f6\r\nHost: localhost:8080\r\nAccept-Encoding: gzip, deflate, br\r\nConnection: keep-alive\r\nContent-Length: 260\r\n": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Request Body {\r\n    \"title\": \"The Godfather\",\r\n    \"genre\": \"Drama\",\r\n    \"details\": \"The aging patriarch of an organized crime dynasty in postwar New York City transfers control of his clandestine empire to his reluctant youngest son.\",\r\n    \"release_date\":\"1972-04-14\"\r\n}": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response Body Printout (Movie Added Successfully)": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				14
+			],
+			"allTests": [
+				{
+					"Headers Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ1c2VyIiwiaWF0IjoxNjQ2NjU3MDE1LCJleHAiOjE2NDY3NDM0MTV9.xwgUCPSz_nJnIgXfyCXSTZP0QgxplXqHjCpX6oZiUNsGpWXe21m7p5MjRRXPaNR0w9RLOfRmECA3vaKcn8FnCQ\r\nContent-Type: application/json\r\nUser-Agent: PostmanRuntime/7.29.0\r\nAccept: */*\r\nPostman-Token: 3dac84d3-f054-49b4-acce-de770a34d6f6\r\nHost: localhost:8080\r\nAccept-Encoding: gzip, deflate, br\r\nConnection: keep-alive\r\nContent-Length: 260\r\n": true,
+					"Request Body {\r\n    \"title\": \"The Godfather\",\r\n    \"genre\": \"Drama\",\r\n    \"details\": \"The aging patriarch of an organized crime dynasty in postwar New York City transfers control of his clandestine empire to his reluctant youngest son.\",\r\n    \"release_date\":\"1972-04-14\"\r\n}": true,
+					"Response Body Printout (Movie Added Successfully)": true
+				}
+			]
+		},
+		{
+			"id": "7ce72127-3fa5-4776-9014-5c1eddce0680",
+			"name": "Add Genre",
+			"url": "http://localhost:8080/api/test/user/addGenre?genre=Horror",
+			"time": 16,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Headers Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ1c2VyIiwiaWF0IjoxNjQ2NjU3MDE1LCJleHAiOjE2NDY3NDM0MTV9.xwgUCPSz_nJnIgXfyCXSTZP0QgxplXqHjCpX6oZiUNsGpWXe21m7p5MjRRXPaNR0w9RLOfRmECA3vaKcn8FnCQ\r\nUser-Agent: PostmanRuntime/7.29.0\r\nAccept: */*\r\nPostman-Token: 0ba7eff3-c07c-46f0-b740-ebb61dfef612\r\nHost: localhost:8080\r\nAccept-Encoding: gzip, deflate, br\r\nConnection: keep-alive\r\nContent-Length: 0\r\n": true,
+				"Response Body Printout (favourite genre updated )": true
+			},
+			"testPassFailCounts": {
+				"Headers Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ1c2VyIiwiaWF0IjoxNjQ2NjU3MDE1LCJleHAiOjE2NDY3NDM0MTV9.xwgUCPSz_nJnIgXfyCXSTZP0QgxplXqHjCpX6oZiUNsGpWXe21m7p5MjRRXPaNR0w9RLOfRmECA3vaKcn8FnCQ\r\nUser-Agent: PostmanRuntime/7.29.0\r\nAccept: */*\r\nPostman-Token: 0ba7eff3-c07c-46f0-b740-ebb61dfef612\r\nHost: localhost:8080\r\nAccept-Encoding: gzip, deflate, br\r\nConnection: keep-alive\r\nContent-Length: 0\r\n": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response Body Printout (favourite genre updated )": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				16
+			],
+			"allTests": [
+				{
+					"Headers Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ1c2VyIiwiaWF0IjoxNjQ2NjU3MDE1LCJleHAiOjE2NDY3NDM0MTV9.xwgUCPSz_nJnIgXfyCXSTZP0QgxplXqHjCpX6oZiUNsGpWXe21m7p5MjRRXPaNR0w9RLOfRmECA3vaKcn8FnCQ\r\nUser-Agent: PostmanRuntime/7.29.0\r\nAccept: */*\r\nPostman-Token: 0ba7eff3-c07c-46f0-b740-ebb61dfef612\r\nHost: localhost:8080\r\nAccept-Encoding: gzip, deflate, br\r\nConnection: keep-alive\r\nContent-Length: 0\r\n": true,
+					"Response Body Printout (favourite genre updated )": true
+				}
+			]
+		},
+		{
+			"id": "c5dc2106-26c0-4dd8-acd6-9558a6fed9e7",
+			"name": "Get Recommendations",
+			"url": "http://localhost:8080/api/test/user/recomm",
+			"time": 21,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Headers Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ1c2VyIiwiaWF0IjoxNjQ2NjU3MDE1LCJleHAiOjE2NDY3NDM0MTV9.xwgUCPSz_nJnIgXfyCXSTZP0QgxplXqHjCpX6oZiUNsGpWXe21m7p5MjRRXPaNR0w9RLOfRmECA3vaKcn8FnCQ\r\nUser-Agent: PostmanRuntime/7.29.0\r\nAccept: */*\r\nPostman-Token: fc8f03f5-7789-4ff3-b84e-b62c96ca37a8\r\nHost: localhost:8080\r\nAccept-Encoding: gzip, deflate, br\r\nConnection: keep-alive\r\n": true,
+				"Response Body Printout ([{\"title\":\"Scream\",\"genre\":\"Horror\",\"details\":\"Twenty-five years after the original series of murders in Woodsboro, a new Ghostface emerges, and Sidney Prescott must return to uncover the truth.\",\"releaseDate\":\"14 January 2022 \",\"score\":0.0},{\"title\":\"Texas Chainsaw Massacre\",\"genre\":\"Horror\",\"details\":\"After nearly 50 years of hiding, Leatherface returns to terrorize a group of idealistic young friends who accidentally disrupt his carefully shielded world in a remote Texas town.\",\"releaseDate\":\"18 February 2022 \",\"score\":0.0}])": true
+			},
+			"testPassFailCounts": {
+				"Headers Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ1c2VyIiwiaWF0IjoxNjQ2NjU3MDE1LCJleHAiOjE2NDY3NDM0MTV9.xwgUCPSz_nJnIgXfyCXSTZP0QgxplXqHjCpX6oZiUNsGpWXe21m7p5MjRRXPaNR0w9RLOfRmECA3vaKcn8FnCQ\r\nUser-Agent: PostmanRuntime/7.29.0\r\nAccept: */*\r\nPostman-Token: fc8f03f5-7789-4ff3-b84e-b62c96ca37a8\r\nHost: localhost:8080\r\nAccept-Encoding: gzip, deflate, br\r\nConnection: keep-alive\r\n": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response Body Printout ([{\"title\":\"Scream\",\"genre\":\"Horror\",\"details\":\"Twenty-five years after the original series of murders in Woodsboro, a new Ghostface emerges, and Sidney Prescott must return to uncover the truth.\",\"releaseDate\":\"14 January 2022 \",\"score\":0.0},{\"title\":\"Texas Chainsaw Massacre\",\"genre\":\"Horror\",\"details\":\"After nearly 50 years of hiding, Leatherface returns to terrorize a group of idealistic young friends who accidentally disrupt his carefully shielded world in a remote Texas town.\",\"releaseDate\":\"18 February 2022 \",\"score\":0.0}])": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				21
+			],
+			"allTests": [
+				{
+					"Headers Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ1c2VyIiwiaWF0IjoxNjQ2NjU3MDE1LCJleHAiOjE2NDY3NDM0MTV9.xwgUCPSz_nJnIgXfyCXSTZP0QgxplXqHjCpX6oZiUNsGpWXe21m7p5MjRRXPaNR0w9RLOfRmECA3vaKcn8FnCQ\r\nUser-Agent: PostmanRuntime/7.29.0\r\nAccept: */*\r\nPostman-Token: fc8f03f5-7789-4ff3-b84e-b62c96ca37a8\r\nHost: localhost:8080\r\nAccept-Encoding: gzip, deflate, br\r\nConnection: keep-alive\r\n": true,
+					"Response Body Printout ([{\"title\":\"Scream\",\"genre\":\"Horror\",\"details\":\"Twenty-five years after the original series of murders in Woodsboro, a new Ghostface emerges, and Sidney Prescott must return to uncover the truth.\",\"releaseDate\":\"14 January 2022 \",\"score\":0.0},{\"title\":\"Texas Chainsaw Massacre\",\"genre\":\"Horror\",\"details\":\"After nearly 50 years of hiding, Leatherface returns to terrorize a group of idealistic young friends who accidentally disrupt his carefully shielded world in a remote Texas town.\",\"releaseDate\":\"18 February 2022 \",\"score\":0.0}])": true
+				}
+			]
+		},
+		{
+			"id": "63421433-1a5b-4676-93f6-d3c82547f27f",
+			"name": "Vote Upvote",
+			"url": "http://localhost:8080/api/test/user/addvote?movieId=33&vote=upvote",
+			"time": 26,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Headers Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ1c2VyIiwiaWF0IjoxNjQ2NjU3MDE1LCJleHAiOjE2NDY3NDM0MTV9.xwgUCPSz_nJnIgXfyCXSTZP0QgxplXqHjCpX6oZiUNsGpWXe21m7p5MjRRXPaNR0w9RLOfRmECA3vaKcn8FnCQ\r\nUser-Agent: PostmanRuntime/7.29.0\r\nAccept: */*\r\nPostman-Token: ef3e5208-e924-4781-8773-db72379efe05\r\nHost: localhost:8080\r\nAccept-Encoding: gzip, deflate, br\r\nConnection: keep-alive\r\nContent-Length: 0\r\n": true,
+				"Response Body Printout (Vote added Successfully)": true
+			},
+			"testPassFailCounts": {
+				"Headers Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ1c2VyIiwiaWF0IjoxNjQ2NjU3MDE1LCJleHAiOjE2NDY3NDM0MTV9.xwgUCPSz_nJnIgXfyCXSTZP0QgxplXqHjCpX6oZiUNsGpWXe21m7p5MjRRXPaNR0w9RLOfRmECA3vaKcn8FnCQ\r\nUser-Agent: PostmanRuntime/7.29.0\r\nAccept: */*\r\nPostman-Token: ef3e5208-e924-4781-8773-db72379efe05\r\nHost: localhost:8080\r\nAccept-Encoding: gzip, deflate, br\r\nConnection: keep-alive\r\nContent-Length: 0\r\n": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response Body Printout (Vote added Successfully)": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				26
+			],
+			"allTests": [
+				{
+					"Headers Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ1c2VyIiwiaWF0IjoxNjQ2NjU3MDE1LCJleHAiOjE2NDY3NDM0MTV9.xwgUCPSz_nJnIgXfyCXSTZP0QgxplXqHjCpX6oZiUNsGpWXe21m7p5MjRRXPaNR0w9RLOfRmECA3vaKcn8FnCQ\r\nUser-Agent: PostmanRuntime/7.29.0\r\nAccept: */*\r\nPostman-Token: ef3e5208-e924-4781-8773-db72379efe05\r\nHost: localhost:8080\r\nAccept-Encoding: gzip, deflate, br\r\nConnection: keep-alive\r\nContent-Length: 0\r\n": true,
+					"Response Body Printout (Vote added Successfully)": true
+				}
+			]
+		},
+		{
+			"id": "d12d6fed-8584-47c7-9ce9-74fe9a11403a",
+			"name": "Vote Downvote",
+			"url": "http://localhost:8080/api/test/user/addvote?movieId=32&vote=downvote",
+			"time": 21,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Headers Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ1c2VyIiwiaWF0IjoxNjQ2NjU3MDE1LCJleHAiOjE2NDY3NDM0MTV9.xwgUCPSz_nJnIgXfyCXSTZP0QgxplXqHjCpX6oZiUNsGpWXe21m7p5MjRRXPaNR0w9RLOfRmECA3vaKcn8FnCQ\r\nUser-Agent: PostmanRuntime/7.29.0\r\nAccept: */*\r\nPostman-Token: 95ff970e-01c1-4d98-b026-93d16b7bfacb\r\nHost: localhost:8080\r\nAccept-Encoding: gzip, deflate, br\r\nConnection: keep-alive\r\nContent-Length: 0\r\n": true,
+				"Response Body Printout (Vote added Successfully)": true
+			},
+			"testPassFailCounts": {
+				"Headers Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ1c2VyIiwiaWF0IjoxNjQ2NjU3MDE1LCJleHAiOjE2NDY3NDM0MTV9.xwgUCPSz_nJnIgXfyCXSTZP0QgxplXqHjCpX6oZiUNsGpWXe21m7p5MjRRXPaNR0w9RLOfRmECA3vaKcn8FnCQ\r\nUser-Agent: PostmanRuntime/7.29.0\r\nAccept: */*\r\nPostman-Token: 95ff970e-01c1-4d98-b026-93d16b7bfacb\r\nHost: localhost:8080\r\nAccept-Encoding: gzip, deflate, br\r\nConnection: keep-alive\r\nContent-Length: 0\r\n": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response Body Printout (Vote added Successfully)": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				21
+			],
+			"allTests": [
+				{
+					"Headers Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ1c2VyIiwiaWF0IjoxNjQ2NjU3MDE1LCJleHAiOjE2NDY3NDM0MTV9.xwgUCPSz_nJnIgXfyCXSTZP0QgxplXqHjCpX6oZiUNsGpWXe21m7p5MjRRXPaNR0w9RLOfRmECA3vaKcn8FnCQ\r\nUser-Agent: PostmanRuntime/7.29.0\r\nAccept: */*\r\nPostman-Token: 95ff970e-01c1-4d98-b026-93d16b7bfacb\r\nHost: localhost:8080\r\nAccept-Encoding: gzip, deflate, br\r\nConnection: keep-alive\r\nContent-Length: 0\r\n": true,
+					"Response Body Printout (Vote added Successfully)": true
+				}
+			]
+		},
+		{
+			"id": "408d7b07-6b7b-4fcc-8ebb-384b051e328c",
+			"name": "Review",
+			"url": "http://localhost:8080/api/test/user/addreview?movieId=33&review=Good%20movie",
+			"time": 22,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Headers Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ1c2VyIiwiaWF0IjoxNjQ2NjU3MDE1LCJleHAiOjE2NDY3NDM0MTV9.xwgUCPSz_nJnIgXfyCXSTZP0QgxplXqHjCpX6oZiUNsGpWXe21m7p5MjRRXPaNR0w9RLOfRmECA3vaKcn8FnCQ\r\nUser-Agent: PostmanRuntime/7.29.0\r\nAccept: */*\r\nPostman-Token: a0525c96-a367-437b-b754-d0345099e405\r\nHost: localhost:8080\r\nAccept-Encoding: gzip, deflate, br\r\nConnection: keep-alive\r\nContent-Length: 0\r\n": true,
+				"Response Body Printout (Review Added Successfully)": true
+			},
+			"testPassFailCounts": {
+				"Headers Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ1c2VyIiwiaWF0IjoxNjQ2NjU3MDE1LCJleHAiOjE2NDY3NDM0MTV9.xwgUCPSz_nJnIgXfyCXSTZP0QgxplXqHjCpX6oZiUNsGpWXe21m7p5MjRRXPaNR0w9RLOfRmECA3vaKcn8FnCQ\r\nUser-Agent: PostmanRuntime/7.29.0\r\nAccept: */*\r\nPostman-Token: a0525c96-a367-437b-b754-d0345099e405\r\nHost: localhost:8080\r\nAccept-Encoding: gzip, deflate, br\r\nConnection: keep-alive\r\nContent-Length: 0\r\n": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response Body Printout (Review Added Successfully)": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				22
+			],
+			"allTests": [
+				{
+					"Headers Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ1c2VyIiwiaWF0IjoxNjQ2NjU3MDE1LCJleHAiOjE2NDY3NDM0MTV9.xwgUCPSz_nJnIgXfyCXSTZP0QgxplXqHjCpX6oZiUNsGpWXe21m7p5MjRRXPaNR0w9RLOfRmECA3vaKcn8FnCQ\r\nUser-Agent: PostmanRuntime/7.29.0\r\nAccept: */*\r\nPostman-Token: a0525c96-a367-437b-b754-d0345099e405\r\nHost: localhost:8080\r\nAccept-Encoding: gzip, deflate, br\r\nConnection: keep-alive\r\nContent-Length: 0\r\n": true,
+					"Response Body Printout (Review Added Successfully)": true
+				}
+			]
+		},
+		{
+			"id": "bcd1f9e7-c211-4c38-93fa-0fb691e002ec",
+			"name": "Get Movies",
+			"url": "http://localhost:8080/api/test/all/movies",
+			"time": 9,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Headers User-Agent: PostmanRuntime/7.29.0\r\nAccept: */*\r\nPostman-Token: 3307d99b-81ad-489a-bd9d-fd1384506f9b\r\nHost: localhost:8080\r\nAccept-Encoding: gzip, deflate, br\r\nConnection: keep-alive\r\n": true,
+				"Response Body Printout ([{\"title\":\"The Godfather\",\"genre\":\"Drama\",\"details\":\"The aging patriarch of an organized crime dynasty in postwar New York City transfers control of his clandestine empire to his reluctant youngest son.\",\"releaseDate\":\"14 April 1972 \",\"score\":0.0},{\"title\":\"The King's Man\",\"genre\":\"Action\",\"details\":\"In the early years of the 20th century, the Kingsman agency is formed to stand against a cabal plotting a war to wipe out millions.\",\"releaseDate\":\"14 January 2022 \",\"score\":0.0},{\"title\":\"Licorice Pizza\",\"genre\":\"Comedy\",\"details\":\"The story of Alana Kane and Gary Valentine growing up, running around and going through the treacherous navigation of first love in the San Fernando Valley, 1973.\",\"releaseDate\":\"26 November 2021 \",\"score\":0.0},{\"title\":\"Marry Me\",\"genre\":\"Romance\",\"details\":\"Music superstars Kat Valdez and Bastian are getting married before a global audience of fans. But when Kat learns, seconds before her vows, that Bastian has been unfaithful, she instead decides to marry Charlie, a stranger in the crowd.\",\"releaseDate\":\"11 February 2022 \",\"score\":0.0},{\"title\":\"The Dark Knight\",\"genre\":\"Thriller\",\"details\":\"When the menace known as the Joker wreaks havoc and chaos on the people of Gotham, Batman must accept one of the greatest psychological and physical tests of his ability to fight injustice.\",\"releaseDate\":\"18 July 2008 \",\"score\":0.0},{\"title\":\"The Batman\",\"genre\":\"Drama\",\"details\":\"When the Riddler, a sadistic serial killer, begins murdering key political figures in Gotham, Batman is forced to investigate the city's hidden corruption and question his family's involvement.\",\"releaseDate\":\"04 March 2022 \",\"score\":0.0},{\"title\":\"Encanto\",\"genre\":\"Fantasy\",\"details\":\"A Colombian teenage girl has to face the frustration of being the only member of her family without magical powers.\",\"releaseDate\":\"24 November 2021 \",\"score\":0.0},{\"title\":\"Inception\",\"genre\":\"Thriller\",\"details\":\"A thief who steals corporate secrets through the use of dream-sharing technology is given the inverse task of planting an idea into the mind of a C.E.O., but his tragic past may doom the project and his team to disaster.\",\"releaseDate\":\"16 July 20010 \",\"score\":0.0},{\"title\":\"Licorice Pizza\",\"genre\":\"Comedy\",\"details\":\"The story of Alana Kane and Gary Valentine growing up, running around and going through the treacherous navigation of first love in the San Fernando Valley, 1973.\",\"releaseDate\":\"26 November 2021 \",\"score\":0.0},{\"title\":\"Scream\",\"genre\":\"Horror\",\"details\":\"Twenty-five years after the original series of murders in Woodsboro, a new Ghostface emerges, and Sidney Prescott must return to uncover the truth.\",\"releaseDate\":\"14 January 2022 \",\"score\":0.0},{\"title\":\"The French Dispatch\",\"genre\":\"Romance\",\"details\":\"A love letter to journalists set in an outpost of an American newspaper in a fictional twentieth century French city that brings to life a collection of stories published in \\\"The French Dispatch Magazine\\\".\",\"releaseDate\":\"22 August 2021 \",\"score\":0.0},{\"title\":\"Free Guy\",\"genre\":\"Fantasy\",\"details\":\"A bank teller discovers that he's actually an NPC inside a brutal, open world video game.\",\"releaseDate\":\"13 July 2021 \",\"score\":-1.0},{\"title\":\"Death on the Nile\",\"genre\":\"Drama\",\"details\":\"While on vacation on the Nile, Hercule Poirot must investigate the murder of a young heiress.\",\"releaseDate\":\"11 February 2022 \",\"score\":0.0},{\"title\":\"Doctor Strange in the Multiverse of Madness\",\"genre\":\"Fantasy\",\"details\":\"Dr. Stephen Strange casts a forbidden spell that opens the door to the multiverse, including an alternate version of himself, whose threat to humanity is too great for the combined forces of Strange, Wong, and Wanda Maximoff.\",\"releaseDate\":\"06 May 2022 \",\"score\":0.0},{\"title\":\"Spider-Man: No Way Home\",\"genre\":\"Fantasy\",\"details\":\"With Spider-Man's identity now revealed, Peter asks Doctor Strange for help. When a spell goes wrong, dangerous foes from other worlds start to appear, forcing Peter to discover what it truly means to be Spider-Man.\",\"releaseDate\":\"17 December 2021 \",\"score\":10.0},{\"title\":\"Texas Chainsaw Massacre\",\"genre\":\"Horror\",\"details\":\"After nearly 50 years of hiding, Leatherface returns to terrorize a group of idealistic young friends who accidentally disrupt his carefully shielded world in a remote Texas town.\",\"releaseDate\":\"18 February 2022 \",\"score\":0.0}])": true
+			},
+			"testPassFailCounts": {
+				"Headers User-Agent: PostmanRuntime/7.29.0\r\nAccept: */*\r\nPostman-Token: 3307d99b-81ad-489a-bd9d-fd1384506f9b\r\nHost: localhost:8080\r\nAccept-Encoding: gzip, deflate, br\r\nConnection: keep-alive\r\n": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response Body Printout ([{\"title\":\"The Godfather\",\"genre\":\"Drama\",\"details\":\"The aging patriarch of an organized crime dynasty in postwar New York City transfers control of his clandestine empire to his reluctant youngest son.\",\"releaseDate\":\"14 April 1972 \",\"score\":0.0},{\"title\":\"The King's Man\",\"genre\":\"Action\",\"details\":\"In the early years of the 20th century, the Kingsman agency is formed to stand against a cabal plotting a war to wipe out millions.\",\"releaseDate\":\"14 January 2022 \",\"score\":0.0},{\"title\":\"Licorice Pizza\",\"genre\":\"Comedy\",\"details\":\"The story of Alana Kane and Gary Valentine growing up, running around and going through the treacherous navigation of first love in the San Fernando Valley, 1973.\",\"releaseDate\":\"26 November 2021 \",\"score\":0.0},{\"title\":\"Marry Me\",\"genre\":\"Romance\",\"details\":\"Music superstars Kat Valdez and Bastian are getting married before a global audience of fans. But when Kat learns, seconds before her vows, that Bastian has been unfaithful, she instead decides to marry Charlie, a stranger in the crowd.\",\"releaseDate\":\"11 February 2022 \",\"score\":0.0},{\"title\":\"The Dark Knight\",\"genre\":\"Thriller\",\"details\":\"When the menace known as the Joker wreaks havoc and chaos on the people of Gotham, Batman must accept one of the greatest psychological and physical tests of his ability to fight injustice.\",\"releaseDate\":\"18 July 2008 \",\"score\":0.0},{\"title\":\"The Batman\",\"genre\":\"Drama\",\"details\":\"When the Riddler, a sadistic serial killer, begins murdering key political figures in Gotham, Batman is forced to investigate the city's hidden corruption and question his family's involvement.\",\"releaseDate\":\"04 March 2022 \",\"score\":0.0},{\"title\":\"Encanto\",\"genre\":\"Fantasy\",\"details\":\"A Colombian teenage girl has to face the frustration of being the only member of her family without magical powers.\",\"releaseDate\":\"24 November 2021 \",\"score\":0.0},{\"title\":\"Inception\",\"genre\":\"Thriller\",\"details\":\"A thief who steals corporate secrets through the use of dream-sharing technology is given the inverse task of planting an idea into the mind of a C.E.O., but his tragic past may doom the project and his team to disaster.\",\"releaseDate\":\"16 July 20010 \",\"score\":0.0},{\"title\":\"Licorice Pizza\",\"genre\":\"Comedy\",\"details\":\"The story of Alana Kane and Gary Valentine growing up, running around and going through the treacherous navigation of first love in the San Fernando Valley, 1973.\",\"releaseDate\":\"26 November 2021 \",\"score\":0.0},{\"title\":\"Scream\",\"genre\":\"Horror\",\"details\":\"Twenty-five years after the original series of murders in Woodsboro, a new Ghostface emerges, and Sidney Prescott must return to uncover the truth.\",\"releaseDate\":\"14 January 2022 \",\"score\":0.0},{\"title\":\"The French Dispatch\",\"genre\":\"Romance\",\"details\":\"A love letter to journalists set in an outpost of an American newspaper in a fictional twentieth century French city that brings to life a collection of stories published in \\\"The French Dispatch Magazine\\\".\",\"releaseDate\":\"22 August 2021 \",\"score\":0.0},{\"title\":\"Free Guy\",\"genre\":\"Fantasy\",\"details\":\"A bank teller discovers that he's actually an NPC inside a brutal, open world video game.\",\"releaseDate\":\"13 July 2021 \",\"score\":-1.0},{\"title\":\"Death on the Nile\",\"genre\":\"Drama\",\"details\":\"While on vacation on the Nile, Hercule Poirot must investigate the murder of a young heiress.\",\"releaseDate\":\"11 February 2022 \",\"score\":0.0},{\"title\":\"Doctor Strange in the Multiverse of Madness\",\"genre\":\"Fantasy\",\"details\":\"Dr. Stephen Strange casts a forbidden spell that opens the door to the multiverse, including an alternate version of himself, whose threat to humanity is too great for the combined forces of Strange, Wong, and Wanda Maximoff.\",\"releaseDate\":\"06 May 2022 \",\"score\":0.0},{\"title\":\"Spider-Man: No Way Home\",\"genre\":\"Fantasy\",\"details\":\"With Spider-Man's identity now revealed, Peter asks Doctor Strange for help. When a spell goes wrong, dangerous foes from other worlds start to appear, forcing Peter to discover what it truly means to be Spider-Man.\",\"releaseDate\":\"17 December 2021 \",\"score\":10.0},{\"title\":\"Texas Chainsaw Massacre\",\"genre\":\"Horror\",\"details\":\"After nearly 50 years of hiding, Leatherface returns to terrorize a group of idealistic young friends who accidentally disrupt his carefully shielded world in a remote Texas town.\",\"releaseDate\":\"18 February 2022 \",\"score\":0.0}])": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				9
+			],
+			"allTests": [
+				{
+					"Headers User-Agent: PostmanRuntime/7.29.0\r\nAccept: */*\r\nPostman-Token: 3307d99b-81ad-489a-bd9d-fd1384506f9b\r\nHost: localhost:8080\r\nAccept-Encoding: gzip, deflate, br\r\nConnection: keep-alive\r\n": true,
+					"Response Body Printout ([{\"title\":\"The Godfather\",\"genre\":\"Drama\",\"details\":\"The aging patriarch of an organized crime dynasty in postwar New York City transfers control of his clandestine empire to his reluctant youngest son.\",\"releaseDate\":\"14 April 1972 \",\"score\":0.0},{\"title\":\"The King's Man\",\"genre\":\"Action\",\"details\":\"In the early years of the 20th century, the Kingsman agency is formed to stand against a cabal plotting a war to wipe out millions.\",\"releaseDate\":\"14 January 2022 \",\"score\":0.0},{\"title\":\"Licorice Pizza\",\"genre\":\"Comedy\",\"details\":\"The story of Alana Kane and Gary Valentine growing up, running around and going through the treacherous navigation of first love in the San Fernando Valley, 1973.\",\"releaseDate\":\"26 November 2021 \",\"score\":0.0},{\"title\":\"Marry Me\",\"genre\":\"Romance\",\"details\":\"Music superstars Kat Valdez and Bastian are getting married before a global audience of fans. But when Kat learns, seconds before her vows, that Bastian has been unfaithful, she instead decides to marry Charlie, a stranger in the crowd.\",\"releaseDate\":\"11 February 2022 \",\"score\":0.0},{\"title\":\"The Dark Knight\",\"genre\":\"Thriller\",\"details\":\"When the menace known as the Joker wreaks havoc and chaos on the people of Gotham, Batman must accept one of the greatest psychological and physical tests of his ability to fight injustice.\",\"releaseDate\":\"18 July 2008 \",\"score\":0.0},{\"title\":\"The Batman\",\"genre\":\"Drama\",\"details\":\"When the Riddler, a sadistic serial killer, begins murdering key political figures in Gotham, Batman is forced to investigate the city's hidden corruption and question his family's involvement.\",\"releaseDate\":\"04 March 2022 \",\"score\":0.0},{\"title\":\"Encanto\",\"genre\":\"Fantasy\",\"details\":\"A Colombian teenage girl has to face the frustration of being the only member of her family without magical powers.\",\"releaseDate\":\"24 November 2021 \",\"score\":0.0},{\"title\":\"Inception\",\"genre\":\"Thriller\",\"details\":\"A thief who steals corporate secrets through the use of dream-sharing technology is given the inverse task of planting an idea into the mind of a C.E.O., but his tragic past may doom the project and his team to disaster.\",\"releaseDate\":\"16 July 20010 \",\"score\":0.0},{\"title\":\"Licorice Pizza\",\"genre\":\"Comedy\",\"details\":\"The story of Alana Kane and Gary Valentine growing up, running around and going through the treacherous navigation of first love in the San Fernando Valley, 1973.\",\"releaseDate\":\"26 November 2021 \",\"score\":0.0},{\"title\":\"Scream\",\"genre\":\"Horror\",\"details\":\"Twenty-five years after the original series of murders in Woodsboro, a new Ghostface emerges, and Sidney Prescott must return to uncover the truth.\",\"releaseDate\":\"14 January 2022 \",\"score\":0.0},{\"title\":\"The French Dispatch\",\"genre\":\"Romance\",\"details\":\"A love letter to journalists set in an outpost of an American newspaper in a fictional twentieth century French city that brings to life a collection of stories published in \\\"The French Dispatch Magazine\\\".\",\"releaseDate\":\"22 August 2021 \",\"score\":0.0},{\"title\":\"Free Guy\",\"genre\":\"Fantasy\",\"details\":\"A bank teller discovers that he's actually an NPC inside a brutal, open world video game.\",\"releaseDate\":\"13 July 2021 \",\"score\":-1.0},{\"title\":\"Death on the Nile\",\"genre\":\"Drama\",\"details\":\"While on vacation on the Nile, Hercule Poirot must investigate the murder of a young heiress.\",\"releaseDate\":\"11 February 2022 \",\"score\":0.0},{\"title\":\"Doctor Strange in the Multiverse of Madness\",\"genre\":\"Fantasy\",\"details\":\"Dr. Stephen Strange casts a forbidden spell that opens the door to the multiverse, including an alternate version of himself, whose threat to humanity is too great for the combined forces of Strange, Wong, and Wanda Maximoff.\",\"releaseDate\":\"06 May 2022 \",\"score\":0.0},{\"title\":\"Spider-Man: No Way Home\",\"genre\":\"Fantasy\",\"details\":\"With Spider-Man's identity now revealed, Peter asks Doctor Strange for help. When a spell goes wrong, dangerous foes from other worlds start to appear, forcing Peter to discover what it truly means to be Spider-Man.\",\"releaseDate\":\"17 December 2021 \",\"score\":10.0},{\"title\":\"Texas Chainsaw Massacre\",\"genre\":\"Horror\",\"details\":\"After nearly 50 years of hiding, Leatherface returns to terrorize a group of idealistic young friends who accidentally disrupt his carefully shielded world in a remote Texas town.\",\"releaseDate\":\"18 February 2022 \",\"score\":0.0}])": true
+				}
+			]
+		},
+		{
+			"id": "55364d60-a921-4dc0-a36c-c6ad2e451003",
+			"name": "OrderByUpvote",
+			"url": "http://localhost:8080/api/test/all/movies/orderBy?orderBy=upvote",
+			"time": 18,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Headers User-Agent: PostmanRuntime/7.29.0\r\nAccept: */*\r\nPostman-Token: 3b0aa7b5-c21a-4fa8-b2ca-ed1399b0c14a\r\nHost: localhost:8080\r\nAccept-Encoding: gzip, deflate, br\r\nConnection: keep-alive\r\n": true,
+				"Response Body Printout ([{\"title\":\"Spider-Man: No Way Home\",\"genre\":\"Fantasy\",\"details\":\"With Spider-Man's identity now revealed, Peter asks Doctor Strange for help. When a spell goes wrong, dangerous foes from other worlds start to appear, forcing Peter to discover what it truly means to be Spider-Man.\",\"releaseDate\":\"17 December 2021 \",\"score\":10.0},{\"title\":\"The King's Man\",\"genre\":\"Action\",\"details\":\"In the early years of the 20th century, the Kingsman agency is formed to stand against a cabal plotting a war to wipe out millions.\",\"releaseDate\":\"14 January 2022 \",\"score\":0.0},{\"title\":\"Licorice Pizza\",\"genre\":\"Comedy\",\"details\":\"The story of Alana Kane and Gary Valentine growing up, running around and going through the treacherous navigation of first love in the San Fernando Valley, 1973.\",\"releaseDate\":\"26 November 2021 \",\"score\":0.0},{\"title\":\"Marry Me\",\"genre\":\"Romance\",\"details\":\"Music superstars Kat Valdez and Bastian are getting married before a global audience of fans. But when Kat learns, seconds before her vows, that Bastian has been unfaithful, she instead decides to marry Charlie, a stranger in the crowd.\",\"releaseDate\":\"11 February 2022 \",\"score\":0.0},{\"title\":\"The Dark Knight\",\"genre\":\"Thriller\",\"details\":\"When the menace known as the Joker wreaks havoc and chaos on the people of Gotham, Batman must accept one of the greatest psychological and physical tests of his ability to fight injustice.\",\"releaseDate\":\"18 July 2008 \",\"score\":0.0},{\"title\":\"The Batman\",\"genre\":\"Drama\",\"details\":\"When the Riddler, a sadistic serial killer, begins murdering key political figures in Gotham, Batman is forced to investigate the city's hidden corruption and question his family's involvement.\",\"releaseDate\":\"04 March 2022 \",\"score\":0.0},{\"title\":\"Encanto\",\"genre\":\"Fantasy\",\"details\":\"A Colombian teenage girl has to face the frustration of being the only member of her family without magical powers.\",\"releaseDate\":\"24 November 2021 \",\"score\":0.0},{\"title\":\"Inception\",\"genre\":\"Thriller\",\"details\":\"A thief who steals corporate secrets through the use of dream-sharing technology is given the inverse task of planting an idea into the mind of a C.E.O., but his tragic past may doom the project and his team to disaster.\",\"releaseDate\":\"16 July 20010 \",\"score\":0.0},{\"title\":\"Licorice Pizza\",\"genre\":\"Comedy\",\"details\":\"The story of Alana Kane and Gary Valentine growing up, running around and going through the treacherous navigation of first love in the San Fernando Valley, 1973.\",\"releaseDate\":\"26 November 2021 \",\"score\":0.0},{\"title\":\"Scream\",\"genre\":\"Horror\",\"details\":\"Twenty-five years after the original series of murders in Woodsboro, a new Ghostface emerges, and Sidney Prescott must return to uncover the truth.\",\"releaseDate\":\"14 January 2022 \",\"score\":0.0},{\"title\":\"The French Dispatch\",\"genre\":\"Romance\",\"details\":\"A love letter to journalists set in an outpost of an American newspaper in a fictional twentieth century French city that brings to life a collection of stories published in \\\"The French Dispatch Magazine\\\".\",\"releaseDate\":\"22 August 2021 \",\"score\":0.0},{\"title\":\"Death on the Nile\",\"genre\":\"Drama\",\"details\":\"While on vacation on the Nile, Hercule Poirot must investigate the murder of a young heiress.\",\"releaseDate\":\"11 February 2022 \",\"score\":0.0},{\"title\":\"Doctor Strange in the Multiverse of Madness\",\"genre\":\"Fantasy\",\"details\":\"Dr. Stephen Strange casts a forbidden spell that opens the door to the multiverse, including an alternate version of himself, whose threat to humanity is too great for the combined forces of Strange, Wong, and Wanda Maximoff.\",\"releaseDate\":\"06 May 2022 \",\"score\":0.0},{\"title\":\"Texas Chainsaw Massacre\",\"genre\":\"Horror\",\"details\":\"After nearly 50 years of hiding, Leatherface returns to terrorize a group of idealistic young friends who accidentally disrupt his carefully shielded world in a remote Texas town.\",\"releaseDate\":\"18 February 2022 \",\"score\":0.0},{\"title\":\"The Godfather\",\"genre\":\"Drama\",\"details\":\"The aging patriarch of an organized crime dynasty in postwar New York City transfers control of his clandestine empire to his reluctant youngest son.\",\"releaseDate\":\"14 April 1972 \",\"score\":0.0},{\"title\":\"Free Guy\",\"genre\":\"Fantasy\",\"details\":\"A bank teller discovers that he's actually an NPC inside a brutal, open world video game.\",\"releaseDate\":\"13 July 2021 \",\"score\":-1.0}])": true
+			},
+			"testPassFailCounts": {
+				"Headers User-Agent: PostmanRuntime/7.29.0\r\nAccept: */*\r\nPostman-Token: 3b0aa7b5-c21a-4fa8-b2ca-ed1399b0c14a\r\nHost: localhost:8080\r\nAccept-Encoding: gzip, deflate, br\r\nConnection: keep-alive\r\n": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response Body Printout ([{\"title\":\"Spider-Man: No Way Home\",\"genre\":\"Fantasy\",\"details\":\"With Spider-Man's identity now revealed, Peter asks Doctor Strange for help. When a spell goes wrong, dangerous foes from other worlds start to appear, forcing Peter to discover what it truly means to be Spider-Man.\",\"releaseDate\":\"17 December 2021 \",\"score\":10.0},{\"title\":\"The King's Man\",\"genre\":\"Action\",\"details\":\"In the early years of the 20th century, the Kingsman agency is formed to stand against a cabal plotting a war to wipe out millions.\",\"releaseDate\":\"14 January 2022 \",\"score\":0.0},{\"title\":\"Licorice Pizza\",\"genre\":\"Comedy\",\"details\":\"The story of Alana Kane and Gary Valentine growing up, running around and going through the treacherous navigation of first love in the San Fernando Valley, 1973.\",\"releaseDate\":\"26 November 2021 \",\"score\":0.0},{\"title\":\"Marry Me\",\"genre\":\"Romance\",\"details\":\"Music superstars Kat Valdez and Bastian are getting married before a global audience of fans. But when Kat learns, seconds before her vows, that Bastian has been unfaithful, she instead decides to marry Charlie, a stranger in the crowd.\",\"releaseDate\":\"11 February 2022 \",\"score\":0.0},{\"title\":\"The Dark Knight\",\"genre\":\"Thriller\",\"details\":\"When the menace known as the Joker wreaks havoc and chaos on the people of Gotham, Batman must accept one of the greatest psychological and physical tests of his ability to fight injustice.\",\"releaseDate\":\"18 July 2008 \",\"score\":0.0},{\"title\":\"The Batman\",\"genre\":\"Drama\",\"details\":\"When the Riddler, a sadistic serial killer, begins murdering key political figures in Gotham, Batman is forced to investigate the city's hidden corruption and question his family's involvement.\",\"releaseDate\":\"04 March 2022 \",\"score\":0.0},{\"title\":\"Encanto\",\"genre\":\"Fantasy\",\"details\":\"A Colombian teenage girl has to face the frustration of being the only member of her family without magical powers.\",\"releaseDate\":\"24 November 2021 \",\"score\":0.0},{\"title\":\"Inception\",\"genre\":\"Thriller\",\"details\":\"A thief who steals corporate secrets through the use of dream-sharing technology is given the inverse task of planting an idea into the mind of a C.E.O., but his tragic past may doom the project and his team to disaster.\",\"releaseDate\":\"16 July 20010 \",\"score\":0.0},{\"title\":\"Licorice Pizza\",\"genre\":\"Comedy\",\"details\":\"The story of Alana Kane and Gary Valentine growing up, running around and going through the treacherous navigation of first love in the San Fernando Valley, 1973.\",\"releaseDate\":\"26 November 2021 \",\"score\":0.0},{\"title\":\"Scream\",\"genre\":\"Horror\",\"details\":\"Twenty-five years after the original series of murders in Woodsboro, a new Ghostface emerges, and Sidney Prescott must return to uncover the truth.\",\"releaseDate\":\"14 January 2022 \",\"score\":0.0},{\"title\":\"The French Dispatch\",\"genre\":\"Romance\",\"details\":\"A love letter to journalists set in an outpost of an American newspaper in a fictional twentieth century French city that brings to life a collection of stories published in \\\"The French Dispatch Magazine\\\".\",\"releaseDate\":\"22 August 2021 \",\"score\":0.0},{\"title\":\"Death on the Nile\",\"genre\":\"Drama\",\"details\":\"While on vacation on the Nile, Hercule Poirot must investigate the murder of a young heiress.\",\"releaseDate\":\"11 February 2022 \",\"score\":0.0},{\"title\":\"Doctor Strange in the Multiverse of Madness\",\"genre\":\"Fantasy\",\"details\":\"Dr. Stephen Strange casts a forbidden spell that opens the door to the multiverse, including an alternate version of himself, whose threat to humanity is too great for the combined forces of Strange, Wong, and Wanda Maximoff.\",\"releaseDate\":\"06 May 2022 \",\"score\":0.0},{\"title\":\"Texas Chainsaw Massacre\",\"genre\":\"Horror\",\"details\":\"After nearly 50 years of hiding, Leatherface returns to terrorize a group of idealistic young friends who accidentally disrupt his carefully shielded world in a remote Texas town.\",\"releaseDate\":\"18 February 2022 \",\"score\":0.0},{\"title\":\"The Godfather\",\"genre\":\"Drama\",\"details\":\"The aging patriarch of an organized crime dynasty in postwar New York City transfers control of his clandestine empire to his reluctant youngest son.\",\"releaseDate\":\"14 April 1972 \",\"score\":0.0},{\"title\":\"Free Guy\",\"genre\":\"Fantasy\",\"details\":\"A bank teller discovers that he's actually an NPC inside a brutal, open world video game.\",\"releaseDate\":\"13 July 2021 \",\"score\":-1.0}])": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				18
+			],
+			"allTests": [
+				{
+					"Headers User-Agent: PostmanRuntime/7.29.0\r\nAccept: */*\r\nPostman-Token: 3b0aa7b5-c21a-4fa8-b2ca-ed1399b0c14a\r\nHost: localhost:8080\r\nAccept-Encoding: gzip, deflate, br\r\nConnection: keep-alive\r\n": true,
+					"Response Body Printout ([{\"title\":\"Spider-Man: No Way Home\",\"genre\":\"Fantasy\",\"details\":\"With Spider-Man's identity now revealed, Peter asks Doctor Strange for help. When a spell goes wrong, dangerous foes from other worlds start to appear, forcing Peter to discover what it truly means to be Spider-Man.\",\"releaseDate\":\"17 December 2021 \",\"score\":10.0},{\"title\":\"The King's Man\",\"genre\":\"Action\",\"details\":\"In the early years of the 20th century, the Kingsman agency is formed to stand against a cabal plotting a war to wipe out millions.\",\"releaseDate\":\"14 January 2022 \",\"score\":0.0},{\"title\":\"Licorice Pizza\",\"genre\":\"Comedy\",\"details\":\"The story of Alana Kane and Gary Valentine growing up, running around and going through the treacherous navigation of first love in the San Fernando Valley, 1973.\",\"releaseDate\":\"26 November 2021 \",\"score\":0.0},{\"title\":\"Marry Me\",\"genre\":\"Romance\",\"details\":\"Music superstars Kat Valdez and Bastian are getting married before a global audience of fans. But when Kat learns, seconds before her vows, that Bastian has been unfaithful, she instead decides to marry Charlie, a stranger in the crowd.\",\"releaseDate\":\"11 February 2022 \",\"score\":0.0},{\"title\":\"The Dark Knight\",\"genre\":\"Thriller\",\"details\":\"When the menace known as the Joker wreaks havoc and chaos on the people of Gotham, Batman must accept one of the greatest psychological and physical tests of his ability to fight injustice.\",\"releaseDate\":\"18 July 2008 \",\"score\":0.0},{\"title\":\"The Batman\",\"genre\":\"Drama\",\"details\":\"When the Riddler, a sadistic serial killer, begins murdering key political figures in Gotham, Batman is forced to investigate the city's hidden corruption and question his family's involvement.\",\"releaseDate\":\"04 March 2022 \",\"score\":0.0},{\"title\":\"Encanto\",\"genre\":\"Fantasy\",\"details\":\"A Colombian teenage girl has to face the frustration of being the only member of her family without magical powers.\",\"releaseDate\":\"24 November 2021 \",\"score\":0.0},{\"title\":\"Inception\",\"genre\":\"Thriller\",\"details\":\"A thief who steals corporate secrets through the use of dream-sharing technology is given the inverse task of planting an idea into the mind of a C.E.O., but his tragic past may doom the project and his team to disaster.\",\"releaseDate\":\"16 July 20010 \",\"score\":0.0},{\"title\":\"Licorice Pizza\",\"genre\":\"Comedy\",\"details\":\"The story of Alana Kane and Gary Valentine growing up, running around and going through the treacherous navigation of first love in the San Fernando Valley, 1973.\",\"releaseDate\":\"26 November 2021 \",\"score\":0.0},{\"title\":\"Scream\",\"genre\":\"Horror\",\"details\":\"Twenty-five years after the original series of murders in Woodsboro, a new Ghostface emerges, and Sidney Prescott must return to uncover the truth.\",\"releaseDate\":\"14 January 2022 \",\"score\":0.0},{\"title\":\"The French Dispatch\",\"genre\":\"Romance\",\"details\":\"A love letter to journalists set in an outpost of an American newspaper in a fictional twentieth century French city that brings to life a collection of stories published in \\\"The French Dispatch Magazine\\\".\",\"releaseDate\":\"22 August 2021 \",\"score\":0.0},{\"title\":\"Death on the Nile\",\"genre\":\"Drama\",\"details\":\"While on vacation on the Nile, Hercule Poirot must investigate the murder of a young heiress.\",\"releaseDate\":\"11 February 2022 \",\"score\":0.0},{\"title\":\"Doctor Strange in the Multiverse of Madness\",\"genre\":\"Fantasy\",\"details\":\"Dr. Stephen Strange casts a forbidden spell that opens the door to the multiverse, including an alternate version of himself, whose threat to humanity is too great for the combined forces of Strange, Wong, and Wanda Maximoff.\",\"releaseDate\":\"06 May 2022 \",\"score\":0.0},{\"title\":\"Texas Chainsaw Massacre\",\"genre\":\"Horror\",\"details\":\"After nearly 50 years of hiding, Leatherface returns to terrorize a group of idealistic young friends who accidentally disrupt his carefully shielded world in a remote Texas town.\",\"releaseDate\":\"18 February 2022 \",\"score\":0.0},{\"title\":\"The Godfather\",\"genre\":\"Drama\",\"details\":\"The aging patriarch of an organized crime dynasty in postwar New York City transfers control of his clandestine empire to his reluctant youngest son.\",\"releaseDate\":\"14 April 1972 \",\"score\":0.0},{\"title\":\"Free Guy\",\"genre\":\"Fantasy\",\"details\":\"A bank teller discovers that he's actually an NPC inside a brutal, open world video game.\",\"releaseDate\":\"13 July 2021 \",\"score\":-1.0}])": true
+				}
+			]
+		},
+		{
+			"id": "e3f2b9f7-ce9c-4c3a-8dca-8dcd2a48cbd3",
+			"name": "OrderByDownvote",
+			"url": "http://localhost:8080/api/test/all/movies/orderBy?orderBy=downvote",
+			"time": 9,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Headers User-Agent: PostmanRuntime/7.29.0\r\nAccept: */*\r\nPostman-Token: fa337966-d3f3-45bb-bfe4-ddfb1624c9af\r\nHost: localhost:8080\r\nAccept-Encoding: gzip, deflate, br\r\nConnection: keep-alive\r\n": true,
+				"Response Body Printout ([{\"title\":\"Free Guy\",\"genre\":\"Fantasy\",\"details\":\"A bank teller discovers that he's actually an NPC inside a brutal, open world video game.\",\"releaseDate\":\"13 July 2021 \",\"score\":-1.0},{\"title\":\"The King's Man\",\"genre\":\"Action\",\"details\":\"In the early years of the 20th century, the Kingsman agency is formed to stand against a cabal plotting a war to wipe out millions.\",\"releaseDate\":\"14 January 2022 \",\"score\":0.0},{\"title\":\"Licorice Pizza\",\"genre\":\"Comedy\",\"details\":\"The story of Alana Kane and Gary Valentine growing up, running around and going through the treacherous navigation of first love in the San Fernando Valley, 1973.\",\"releaseDate\":\"26 November 2021 \",\"score\":0.0},{\"title\":\"Marry Me\",\"genre\":\"Romance\",\"details\":\"Music superstars Kat Valdez and Bastian are getting married before a global audience of fans. But when Kat learns, seconds before her vows, that Bastian has been unfaithful, she instead decides to marry Charlie, a stranger in the crowd.\",\"releaseDate\":\"11 February 2022 \",\"score\":0.0},{\"title\":\"The Dark Knight\",\"genre\":\"Thriller\",\"details\":\"When the menace known as the Joker wreaks havoc and chaos on the people of Gotham, Batman must accept one of the greatest psychological and physical tests of his ability to fight injustice.\",\"releaseDate\":\"18 July 2008 \",\"score\":0.0},{\"title\":\"The Batman\",\"genre\":\"Drama\",\"details\":\"When the Riddler, a sadistic serial killer, begins murdering key political figures in Gotham, Batman is forced to investigate the city's hidden corruption and question his family's involvement.\",\"releaseDate\":\"04 March 2022 \",\"score\":0.0},{\"title\":\"Encanto\",\"genre\":\"Fantasy\",\"details\":\"A Colombian teenage girl has to face the frustration of being the only member of her family without magical powers.\",\"releaseDate\":\"24 November 2021 \",\"score\":0.0},{\"title\":\"Inception\",\"genre\":\"Thriller\",\"details\":\"A thief who steals corporate secrets through the use of dream-sharing technology is given the inverse task of planting an idea into the mind of a C.E.O., but his tragic past may doom the project and his team to disaster.\",\"releaseDate\":\"16 July 20010 \",\"score\":0.0},{\"title\":\"Licorice Pizza\",\"genre\":\"Comedy\",\"details\":\"The story of Alana Kane and Gary Valentine growing up, running around and going through the treacherous navigation of first love in the San Fernando Valley, 1973.\",\"releaseDate\":\"26 November 2021 \",\"score\":0.0},{\"title\":\"Scream\",\"genre\":\"Horror\",\"details\":\"Twenty-five years after the original series of murders in Woodsboro, a new Ghostface emerges, and Sidney Prescott must return to uncover the truth.\",\"releaseDate\":\"14 January 2022 \",\"score\":0.0},{\"title\":\"The French Dispatch\",\"genre\":\"Romance\",\"details\":\"A love letter to journalists set in an outpost of an American newspaper in a fictional twentieth century French city that brings to life a collection of stories published in \\\"The French Dispatch Magazine\\\".\",\"releaseDate\":\"22 August 2021 \",\"score\":0.0},{\"title\":\"Death on the Nile\",\"genre\":\"Drama\",\"details\":\"While on vacation on the Nile, Hercule Poirot must investigate the murder of a young heiress.\",\"releaseDate\":\"11 February 2022 \",\"score\":0.0},{\"title\":\"Doctor Strange in the Multiverse of Madness\",\"genre\":\"Fantasy\",\"details\":\"Dr. Stephen Strange casts a forbidden spell that opens the door to the multiverse, including an alternate version of himself, whose threat to humanity is too great for the combined forces of Strange, Wong, and Wanda Maximoff.\",\"releaseDate\":\"06 May 2022 \",\"score\":0.0},{\"title\":\"Texas Chainsaw Massacre\",\"genre\":\"Horror\",\"details\":\"After nearly 50 years of hiding, Leatherface returns to terrorize a group of idealistic young friends who accidentally disrupt his carefully shielded world in a remote Texas town.\",\"releaseDate\":\"18 February 2022 \",\"score\":0.0},{\"title\":\"The Godfather\",\"genre\":\"Drama\",\"details\":\"The aging patriarch of an organized crime dynasty in postwar New York City transfers control of his clandestine empire to his reluctant youngest son.\",\"releaseDate\":\"14 April 1972 \",\"score\":0.0},{\"title\":\"Spider-Man: No Way Home\",\"genre\":\"Fantasy\",\"details\":\"With Spider-Man's identity now revealed, Peter asks Doctor Strange for help. When a spell goes wrong, dangerous foes from other worlds start to appear, forcing Peter to discover what it truly means to be Spider-Man.\",\"releaseDate\":\"17 December 2021 \",\"score\":10.0}])": true
+			},
+			"testPassFailCounts": {
+				"Headers User-Agent: PostmanRuntime/7.29.0\r\nAccept: */*\r\nPostman-Token: fa337966-d3f3-45bb-bfe4-ddfb1624c9af\r\nHost: localhost:8080\r\nAccept-Encoding: gzip, deflate, br\r\nConnection: keep-alive\r\n": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response Body Printout ([{\"title\":\"Free Guy\",\"genre\":\"Fantasy\",\"details\":\"A bank teller discovers that he's actually an NPC inside a brutal, open world video game.\",\"releaseDate\":\"13 July 2021 \",\"score\":-1.0},{\"title\":\"The King's Man\",\"genre\":\"Action\",\"details\":\"In the early years of the 20th century, the Kingsman agency is formed to stand against a cabal plotting a war to wipe out millions.\",\"releaseDate\":\"14 January 2022 \",\"score\":0.0},{\"title\":\"Licorice Pizza\",\"genre\":\"Comedy\",\"details\":\"The story of Alana Kane and Gary Valentine growing up, running around and going through the treacherous navigation of first love in the San Fernando Valley, 1973.\",\"releaseDate\":\"26 November 2021 \",\"score\":0.0},{\"title\":\"Marry Me\",\"genre\":\"Romance\",\"details\":\"Music superstars Kat Valdez and Bastian are getting married before a global audience of fans. But when Kat learns, seconds before her vows, that Bastian has been unfaithful, she instead decides to marry Charlie, a stranger in the crowd.\",\"releaseDate\":\"11 February 2022 \",\"score\":0.0},{\"title\":\"The Dark Knight\",\"genre\":\"Thriller\",\"details\":\"When the menace known as the Joker wreaks havoc and chaos on the people of Gotham, Batman must accept one of the greatest psychological and physical tests of his ability to fight injustice.\",\"releaseDate\":\"18 July 2008 \",\"score\":0.0},{\"title\":\"The Batman\",\"genre\":\"Drama\",\"details\":\"When the Riddler, a sadistic serial killer, begins murdering key political figures in Gotham, Batman is forced to investigate the city's hidden corruption and question his family's involvement.\",\"releaseDate\":\"04 March 2022 \",\"score\":0.0},{\"title\":\"Encanto\",\"genre\":\"Fantasy\",\"details\":\"A Colombian teenage girl has to face the frustration of being the only member of her family without magical powers.\",\"releaseDate\":\"24 November 2021 \",\"score\":0.0},{\"title\":\"Inception\",\"genre\":\"Thriller\",\"details\":\"A thief who steals corporate secrets through the use of dream-sharing technology is given the inverse task of planting an idea into the mind of a C.E.O., but his tragic past may doom the project and his team to disaster.\",\"releaseDate\":\"16 July 20010 \",\"score\":0.0},{\"title\":\"Licorice Pizza\",\"genre\":\"Comedy\",\"details\":\"The story of Alana Kane and Gary Valentine growing up, running around and going through the treacherous navigation of first love in the San Fernando Valley, 1973.\",\"releaseDate\":\"26 November 2021 \",\"score\":0.0},{\"title\":\"Scream\",\"genre\":\"Horror\",\"details\":\"Twenty-five years after the original series of murders in Woodsboro, a new Ghostface emerges, and Sidney Prescott must return to uncover the truth.\",\"releaseDate\":\"14 January 2022 \",\"score\":0.0},{\"title\":\"The French Dispatch\",\"genre\":\"Romance\",\"details\":\"A love letter to journalists set in an outpost of an American newspaper in a fictional twentieth century French city that brings to life a collection of stories published in \\\"The French Dispatch Magazine\\\".\",\"releaseDate\":\"22 August 2021 \",\"score\":0.0},{\"title\":\"Death on the Nile\",\"genre\":\"Drama\",\"details\":\"While on vacation on the Nile, Hercule Poirot must investigate the murder of a young heiress.\",\"releaseDate\":\"11 February 2022 \",\"score\":0.0},{\"title\":\"Doctor Strange in the Multiverse of Madness\",\"genre\":\"Fantasy\",\"details\":\"Dr. Stephen Strange casts a forbidden spell that opens the door to the multiverse, including an alternate version of himself, whose threat to humanity is too great for the combined forces of Strange, Wong, and Wanda Maximoff.\",\"releaseDate\":\"06 May 2022 \",\"score\":0.0},{\"title\":\"Texas Chainsaw Massacre\",\"genre\":\"Horror\",\"details\":\"After nearly 50 years of hiding, Leatherface returns to terrorize a group of idealistic young friends who accidentally disrupt his carefully shielded world in a remote Texas town.\",\"releaseDate\":\"18 February 2022 \",\"score\":0.0},{\"title\":\"The Godfather\",\"genre\":\"Drama\",\"details\":\"The aging patriarch of an organized crime dynasty in postwar New York City transfers control of his clandestine empire to his reluctant youngest son.\",\"releaseDate\":\"14 April 1972 \",\"score\":0.0},{\"title\":\"Spider-Man: No Way Home\",\"genre\":\"Fantasy\",\"details\":\"With Spider-Man's identity now revealed, Peter asks Doctor Strange for help. When a spell goes wrong, dangerous foes from other worlds start to appear, forcing Peter to discover what it truly means to be Spider-Man.\",\"releaseDate\":\"17 December 2021 \",\"score\":10.0}])": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				9
+			],
+			"allTests": [
+				{
+					"Headers User-Agent: PostmanRuntime/7.29.0\r\nAccept: */*\r\nPostman-Token: fa337966-d3f3-45bb-bfe4-ddfb1624c9af\r\nHost: localhost:8080\r\nAccept-Encoding: gzip, deflate, br\r\nConnection: keep-alive\r\n": true,
+					"Response Body Printout ([{\"title\":\"Free Guy\",\"genre\":\"Fantasy\",\"details\":\"A bank teller discovers that he's actually an NPC inside a brutal, open world video game.\",\"releaseDate\":\"13 July 2021 \",\"score\":-1.0},{\"title\":\"The King's Man\",\"genre\":\"Action\",\"details\":\"In the early years of the 20th century, the Kingsman agency is formed to stand against a cabal plotting a war to wipe out millions.\",\"releaseDate\":\"14 January 2022 \",\"score\":0.0},{\"title\":\"Licorice Pizza\",\"genre\":\"Comedy\",\"details\":\"The story of Alana Kane and Gary Valentine growing up, running around and going through the treacherous navigation of first love in the San Fernando Valley, 1973.\",\"releaseDate\":\"26 November 2021 \",\"score\":0.0},{\"title\":\"Marry Me\",\"genre\":\"Romance\",\"details\":\"Music superstars Kat Valdez and Bastian are getting married before a global audience of fans. But when Kat learns, seconds before her vows, that Bastian has been unfaithful, she instead decides to marry Charlie, a stranger in the crowd.\",\"releaseDate\":\"11 February 2022 \",\"score\":0.0},{\"title\":\"The Dark Knight\",\"genre\":\"Thriller\",\"details\":\"When the menace known as the Joker wreaks havoc and chaos on the people of Gotham, Batman must accept one of the greatest psychological and physical tests of his ability to fight injustice.\",\"releaseDate\":\"18 July 2008 \",\"score\":0.0},{\"title\":\"The Batman\",\"genre\":\"Drama\",\"details\":\"When the Riddler, a sadistic serial killer, begins murdering key political figures in Gotham, Batman is forced to investigate the city's hidden corruption and question his family's involvement.\",\"releaseDate\":\"04 March 2022 \",\"score\":0.0},{\"title\":\"Encanto\",\"genre\":\"Fantasy\",\"details\":\"A Colombian teenage girl has to face the frustration of being the only member of her family without magical powers.\",\"releaseDate\":\"24 November 2021 \",\"score\":0.0},{\"title\":\"Inception\",\"genre\":\"Thriller\",\"details\":\"A thief who steals corporate secrets through the use of dream-sharing technology is given the inverse task of planting an idea into the mind of a C.E.O., but his tragic past may doom the project and his team to disaster.\",\"releaseDate\":\"16 July 20010 \",\"score\":0.0},{\"title\":\"Licorice Pizza\",\"genre\":\"Comedy\",\"details\":\"The story of Alana Kane and Gary Valentine growing up, running around and going through the treacherous navigation of first love in the San Fernando Valley, 1973.\",\"releaseDate\":\"26 November 2021 \",\"score\":0.0},{\"title\":\"Scream\",\"genre\":\"Horror\",\"details\":\"Twenty-five years after the original series of murders in Woodsboro, a new Ghostface emerges, and Sidney Prescott must return to uncover the truth.\",\"releaseDate\":\"14 January 2022 \",\"score\":0.0},{\"title\":\"The French Dispatch\",\"genre\":\"Romance\",\"details\":\"A love letter to journalists set in an outpost of an American newspaper in a fictional twentieth century French city that brings to life a collection of stories published in \\\"The French Dispatch Magazine\\\".\",\"releaseDate\":\"22 August 2021 \",\"score\":0.0},{\"title\":\"Death on the Nile\",\"genre\":\"Drama\",\"details\":\"While on vacation on the Nile, Hercule Poirot must investigate the murder of a young heiress.\",\"releaseDate\":\"11 February 2022 \",\"score\":0.0},{\"title\":\"Doctor Strange in the Multiverse of Madness\",\"genre\":\"Fantasy\",\"details\":\"Dr. Stephen Strange casts a forbidden spell that opens the door to the multiverse, including an alternate version of himself, whose threat to humanity is too great for the combined forces of Strange, Wong, and Wanda Maximoff.\",\"releaseDate\":\"06 May 2022 \",\"score\":0.0},{\"title\":\"Texas Chainsaw Massacre\",\"genre\":\"Horror\",\"details\":\"After nearly 50 years of hiding, Leatherface returns to terrorize a group of idealistic young friends who accidentally disrupt his carefully shielded world in a remote Texas town.\",\"releaseDate\":\"18 February 2022 \",\"score\":0.0},{\"title\":\"The Godfather\",\"genre\":\"Drama\",\"details\":\"The aging patriarch of an organized crime dynasty in postwar New York City transfers control of his clandestine empire to his reluctant youngest son.\",\"releaseDate\":\"14 April 1972 \",\"score\":0.0},{\"title\":\"Spider-Man: No Way Home\",\"genre\":\"Fantasy\",\"details\":\"With Spider-Man's identity now revealed, Peter asks Doctor Strange for help. When a spell goes wrong, dangerous foes from other worlds start to appear, forcing Peter to discover what it truly means to be Spider-Man.\",\"releaseDate\":\"17 December 2021 \",\"score\":10.0}])": true
+				}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 477,
+	"collection": {
+		"requests": [
+			{
+				"id": "47cf8aa8-5a7c-466e-ad00-be3d78523f41",
+				"method": "POST"
+			},
+			{
+				"id": "d812d3eb-f4d2-4d66-93f6-74f6813bd837",
+				"method": "POST"
+			},
+			{
+				"id": "5971837d-63c9-4d49-99f0-f2440e3b0fa2",
+				"method": "GET"
+			},
+			{
+				"id": "742129d9-2e58-473c-a8c2-827995255bee",
+				"method": "POST"
+			},
+			{
+				"id": "7ce72127-3fa5-4776-9014-5c1eddce0680",
+				"method": "POST"
+			},
+			{
+				"id": "c5dc2106-26c0-4dd8-acd6-9558a6fed9e7",
+				"method": "GET"
+			},
+			{
+				"id": "63421433-1a5b-4676-93f6-d3c82547f27f",
+				"method": "POST"
+			},
+			{
+				"id": "d12d6fed-8584-47c7-9ce9-74fe9a11403a",
+				"method": "POST"
+			},
+			{
+				"id": "408d7b07-6b7b-4fcc-8ebb-384b051e328c",
+				"method": "POST"
+			},
+			{
+				"id": "bcd1f9e7-c211-4c38-93fa-0fb691e002ec",
+				"method": "GET"
+			},
+			{
+				"id": "55364d60-a921-4dc0-a36c-c6ad2e451003",
+				"method": "GET"
+			},
+			{
+				"id": "e3f2b9f7-ce9c-4c3a-8dca-8dcd2a48cbd3",
+				"method": "GET"
+			}
+		]
+	}
+}

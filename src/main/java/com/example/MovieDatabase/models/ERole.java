@@ -1,0 +1,7 @@
+package com.example.MovieDatabase.models;
+
+public enum ERole {
+  ROLE_USER,
+  ROLE_MODERATOR,
+  ROLE_ADMIN
+}
