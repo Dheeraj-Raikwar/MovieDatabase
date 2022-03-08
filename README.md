@@ -9,7 +9,7 @@ Used Technologies:
 	
 Features:
 
-Registration Services:
+	Registration Services:
 	● Register/Signup - Api for user registration (username/password should be fine)
 	● Login Api - Registered user should be able to login and use other Apis For registered users only:
 	● Add Movies Api - A registered user must be able to add a movie to the DB. A movie have a title, genre, release date, score.[POST] [movie details in request 		body is Required]
@@ -59,9 +59,10 @@ Installation:
 	● Build and run
 		
 
-		Postman response can be found in Output folder.
+	Postman response can be found in Output folder.
 
 Notes:
+
 		● Favourite genre is set using query parameter.
 		● In Movie Table score is calculated by average rating of upvotes and downvotes which are in voting table.
 		● Reviews are present in review table.
