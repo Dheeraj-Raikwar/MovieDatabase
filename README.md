@@ -17,7 +17,7 @@ Features:
 	{
 		"title": "The Godfather",
 		"genre": "Drama",
-		"details": "The aging patriarch of an organized crime dynasty in postwar New York City transfers control of his clandestine empire to his reluctant 				youngest son.",
+		"details": "The aging patriarch of an organized crime dynasty in postwar New York City transfers control of his clandestine empire to his reluctant youngest son.",
 		"release_date":"1972-04-14"
 	}
 	● Set favourite genre Api - The registered users are able to set their favourite genre.[POST][genre parameter is Required]
@@ -63,6 +63,6 @@ Installation:
 
 Notes:
 
-		● Favourite genre is set using query parameter.
-		● In Movie Table score is calculated by average rating of upvotes and downvotes which are in voting table.
-		● Reviews are present in review table.
+	● Favourite genre is set using query parameter.
+	● In Movie Table score is calculated by average rating of upvotes and downvotes which are in voting table.
+	● Reviews are present in review table.
