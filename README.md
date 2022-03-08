@@ -65,7 +65,7 @@ Features:
 	Process:
 		● Sign up
 		
-		![alt text](https://github.com/DheerajR8/MovieDatabase/blob/main/Output/MDSignup.PNG?raw=true)
+		![alt text](https://github.com/DheerajR8/MovieDatabase/blob/main/output/image.jpg?raw=true)
 	
 	
 		● Sign in
