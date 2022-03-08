@@ -47,7 +47,6 @@ EndPoints:
 	● Add Review Api http://localhost:8080/api/test/user/addreview
 	
 	● Get Movies api http://localhost:8080/api/test/all/movies
-	● Query all movies http://localhost:8080/api/test/all/movies/orderBy
 	● sort by upvotes/downVotes http://localhost:8080/api/test/all/movies/orderBy
 		
 Installation:
